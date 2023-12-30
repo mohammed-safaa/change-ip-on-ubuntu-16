@@ -1,0 +1,15 @@
+auto lo
+iface lo inet loopback
+
+auto enp0s25
+iface enp0s25 inet static
+address 192.168.222.6
+netmask 255.255.255.0
+gateway 192.168.222.1
+dns-nameservers 192.168.222.1 8.8.8.8
+
+
+
+
+
+sudo ifdown enp0s25 && sudo ifup -v enp0s25
